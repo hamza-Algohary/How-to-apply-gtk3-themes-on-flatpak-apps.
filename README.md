@@ -1,14 +1,14 @@
 # How to apply gtk themes on flatpak apps.
-Among the reasons preventing many users from installing apps using Flatpak , is that flatpak apps can not detect the currently applied gtk theme. The only official way to apply gtk themes to flatpaks is by installing the desired theme as a flatpak(link) , there are few themes available as flatpak compared with available gtk themes. In this guide I am going to introduce you a way to make flatpak apps aware of external gtk themes. 
+Among the reasons preventing many users from installing apps using Flatpak , is that flatpak apps can not detect the currently applied gtk theme. The only official way to apply gtk themes to flatpaks is by [installing the desired theme as a flatpak](https://docs.flatpak.org/en/latest/desktop-integration.html#theming) , there are few themes available as flatpak compared with available gtk themes. In this guide I am going to introduce you a way to make flatpak apps aware of external gtk themes. 
 
 Before we proceed , let's understand why flatpak apps have this behaviour. Flatpak apps run inside a container , so they don't have access to the host filesystem ,network ,or physical devices without setting the appropriate permession , and that is what we are going to do.
 
 # Step 1:Give flatpak apps access to Gtk themes.
 Gtk themes are located in /usr/share/themes for all users , and in ~/.themes for a specific user. To give all flatpak packages permession to access ~/.themes run the following command:
 ```
-sudo flatpak override --filesystem=/home/<user_name>/.themes
+sudo flatpak override --filesystem=/home/user_name/.themes
 ```
-Don't forget to replace <user_name> with your user name. Notice that you can't give access to /usr/share/themes because according to flatpak documentaion they are black listed (link).
+Don't forget to replace *user_name* with your user name. Notice that you can't give access to /usr/share/themes because according to [flatpak documentaion they are black listed.](https://docs.flatpak.org/en/latest/sandbox-permissions.html#filesystem-access)
 To give the above permession for a specific application (for example gnome-caluclator) use the following command:
 ```
 sudo flatpak override org.gnome.Calculator --filesystem=/home/user_name/.themes
@@ -29,7 +29,7 @@ and replace my-theme with the folder name of the theme you want to apply(and it 
 # Step 3:Run a flatpak application.
 Here is a screenshot of gnome calculator and gnome builder (flatpak version) before the above steps:
 ![](flatpak-adwaita.png)
-and after the above steps (With Canta gtk theme)(link):
+and after the above steps (With Canta gtk theme):
 ![](flatpak-canta-dark.png)
 
 I hope that this guide helped you. Don't forget to write in the comments it this method worked for you (Or not) :)
