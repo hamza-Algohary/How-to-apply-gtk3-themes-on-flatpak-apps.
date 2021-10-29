@@ -1,4 +1,4 @@
-# How to apply gtk themes onflatpak-apps.
+# How to apply gtk themes on flatpak apps.
 Among the reasons preventing many users from installing apps using Flatpak , is that flatpak apps can not detect the currently applied gtk theme. The only official way to apply gtk themes to flatpaks is by installing the desired theme as a flatpak(link) , there are few themes available as flatpak compared with available gtk themes. In this guide I am going to introduce you a way to make flatpak apps aware of external gtk themes. 
 
 Before we proceed , let's understand why flatpak apps have this behaviour. Flatpak apps run inside a container , so they don't have access to the host filesystem ,network ,or physical devices without setting the appropriate permession , and that is what we are going to do.
