@@ -28,9 +28,9 @@ and replace my-theme with the folder name of the theme you want to apply(and it 
 
 # Step 3:Run a flatpak application.
 Here is a screenshot of gnome calculator and gnome builder (flatpak version) before the above steps:
-[](flatpak-adwaita.png)
+[](https://github.com/hamza-Algohary/How-to-apply-gtk3-themes-on-flatpak-apps./blob/main/flatpak-adwaita.png)
 and after the above steps (With Canta gtk theme)(link):
-[](flatpak-canta-dark.png)
+[](https://github.com/hamza-Algohary/How-to-apply-gtk3-themes-on-flatpak-apps./blob/main/flatpak-canta-dark.png)
 
 I hope that this guide helped you. Don't forget to write in the comments it this method worked for you (Or not) :)
 
