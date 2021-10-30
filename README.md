@@ -32,7 +32,7 @@ Here is a screenshot of gnome calculator and gnome builder (flatpak version) bef
 and after the above steps (With Canta gtk theme):
 ![](flatpak-canta-dark.png)
 
-I hope that this guide helped you. Don't forget to write in the comments it this method worked for you (Or not) :)
+I hope that this guide helped you. Don't forget to write in the comments if this method worked for you (Or not) :)
 
 # A simple problem and its solution
 If you have previously overriden the GTK_THEME or filesystem for a specific flatpak package using "flatpak override" command ,that may block this package from reading the globally overriden permession. To fix this ,reset permessions of this package by running the following:
